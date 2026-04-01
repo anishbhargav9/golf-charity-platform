@@ -1,0 +1,141 @@
+/* home.css */
+.home { width: 100%; }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(135deg, var(--primary) 60%, var(--accent2));
+  color: var(--white);
+  padding: 80px 10%;
+  min-height: 90vh;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #bbb;
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn-hero-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+.btn-hero-primary:hover { opacity: 0.88; }
+
+.btn-hero-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+.btn-hero-secondary:hover { background: rgba(255,255,255,0.1); }
+
+.hero-card {
+  background: rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 240px;
+}
+.hero-stat { text-align: center; }
+.hero-stat span { display: block; font-size: 36px; font-weight: 900; color: #fff; }
+.hero-stat small { font-size: 13px; color: #aaa; letter-spacing: 1px; }
+.hero-divider { height: 1px; background: rgba(255,255,255,0.12); }
+
+.how-section { padding: 70px 20px; text-align: center; }
+.how-section h2 { font-size: 32px; margin-bottom: 40px; }
+
+.how-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  box-shadow: var(--shadow);
+}
+.how-number {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.how-card h3 { font-size: 20px; margin-bottom: 10px; }
+.how-card p  { color: var(--gray); line-height: 1.6; }
+
+.prize-section {
+  background: var(--primary);
+  color: var(--white);
+  padding: 70px 20px;
+  text-align: center;
+}
+.prize-section h2 { font-size: 32px; margin-bottom: 40px; }
+
+.prize-card {
+  border-radius: var(--radius);
+  padding: 36px 24px;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.prize-card h3   { font-size: 18px; margin-bottom: 16px; color: #ccc; }
+.prize-pct       { font-size: 52px; font-weight: 900; margin-bottom: 10px; }
+.prize-card p    { color: #aaa; font-size: 14px; }
+.prize-3 .prize-pct { color: #56ccf2; }
+.prize-4 .prize-pct { color: #f2c94c; }
+.prize-5 .prize-pct { color: var(--accent); }
+
+.charity-section { padding: 70px 20px; }
+.charity-section h2 { font-size: 32px; margin-bottom: 40px; text-align: center; }
+.charity-home-card h3 { margin-bottom: 10px; }
+.charity-home-card p  { color: var(--gray); font-size: 14px; margin-bottom: 12px; }
+.charity-home-card a  { color: var(--accent); font-weight: 600; }
+
+.cta-section {
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  padding: 80px 20px;
+}
+.cta-section h2 { font-size: 36px; font-weight: 900; margin-bottom: 14px; }
+.cta-section p  { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+.cta-section .btn-hero-primary { background: #fff; color: var(--accent); }
+
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; padding: 60px 6%; }
+  .hero-visual { width: 100%; }
+  .hero-card { flex-direction: row; padding: 24px; }
+}

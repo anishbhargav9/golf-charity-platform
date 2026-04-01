@@ -1,0 +1,41 @@
+/* auth.css */
+.auth-page {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--light);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-card h2    { font-size: 28px; margin-bottom: 6px; }
+.auth-sub        { color: var(--gray); margin-bottom: 28px; font-size: 15px; }
+
+.form-group      { margin-bottom: 18px; }
+.form-group label{ display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; }
+
+.auth-btn  { width: 100%; margin-top: 8px; padding: 13px; font-size: 16px; }
+.auth-footer { text-align: center; margin-top: 20px; color: var(--gray); font-size: 14px; }
+.auth-footer a   { color: var(--accent); font-weight: 700; }
+
+.plan-selector { display: flex; gap: 12px; margin-top: 6px; }
+.plan-option {
+  flex: 1;
+  border: 2px solid var(--lightgray);
+  border-radius: var(--radius);
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.plan-option.selected {
+  border-color: var(--accent);
+  background: #fff0f3;
+}
+.plan-option strong { display: block; font-size: 18px; color: var(--accent); }
+.plan-option span   { font-size: 13px; color: var(--gray); }

@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary:     #1a1a2e;
+  --accent:      #e94560;
+  --accent2:     #0f3460;
+  --light:       #f5f5f5;
+  --white:       #ffffff;
+  --gray:        #6c757d;
+  --lightgray:   #e9ecef;
+  --success:     #28a745;
+  --warning:     #ffc107;
+  --danger:      #dc3545;
+  --radius:      10px;
+  --shadow:      0 2px 12px rgba(0,0,0,0.10);
+  --font:        'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background:  var(--light);
+  color:        var(--primary);
+  min-height:   100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.1s;
+}
+button:hover  { opacity: 0.88; }
+button:active { transform: scale(0.97); }
+
+.btn-primary  { background: var(--accent);  color: var(--white); }
+.btn-secondary{ background: var(--accent2); color: var(--white); }
+.btn-danger   { background: var(--danger);  color: var(--white); }
+.btn-success  { background: var(--success); color: var(--white); }
+.btn-gray     { background: var(--gray);    color: var(--white); }
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--lightgray);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-family: var(--font);
+  outline: none;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.error-msg   { color: var(--danger);  font-size: 14px; margin-top: 6px; }
+.success-msg { color: var(--success); font-size: 14px; margin-top: 6px; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-active    { background: #d4edda; color: #155724; }
+.badge-inactive  { background: #f8d7da; color: #721c24; }
+.badge-pending   { background: #fff3cd; color: #856404; }
+.badge-approved  { background: #d4edda; color: #155724; }
+.badge-rejected  { background: #f8d7da; color: #721c24; }
+.badge-paid      { background: #cce5ff; color: #004085; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}

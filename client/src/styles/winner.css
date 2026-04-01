@@ -1,0 +1,11 @@
+/* winner.css */
+h1 { font-size: 28px; font-weight: 800; }
+.winner-sub { color: var(--gray); margin-bottom: 4px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; }
+
+.winner-card         { margin-bottom: 14px; }
+.winner-card-top     { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.winner-card-top h3  { font-size: 18px; font-weight: 700; }
+.winner-card-meta    { display: flex; gap: 20px; font-size: 14px; color: var(--gray); flex-wrap: wrap; }
+.winner-card-meta strong { color: var(--primary); }
