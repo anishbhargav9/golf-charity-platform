@@ -23,7 +23,7 @@ require('./models/Subscription');
 const app = express();
 
 app.use(cors({
-  origin: '*',
+  origin: "https://golf-charity-platformm-git-main-anishbhargav9s-projects.vercel.app",
   credentials: true
 }));
 app.use(express.json());
@@ -51,7 +51,14 @@ app.listen(PORT, '0.0.0.0', () => {
 });
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connected'))
+  .then(() => {
+    console.log('MongoDB connected');
+
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
+  })
   .catch(err => {
     console.error('DB connection error:', err.message);
     process.exit(1);
