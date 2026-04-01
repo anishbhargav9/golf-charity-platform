@@ -3,7 +3,9 @@ const mongoose   = require('mongoose');
 const cors       = require('cors');
 const dotenv     = require('dotenv');
 const path       = require('path');
-dotenv.config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 // Preload all models first to prevent circular require issues
 require('./models/User');
